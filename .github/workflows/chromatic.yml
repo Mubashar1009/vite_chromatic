@@ -26,10 +26,8 @@ jobs:
 
       - name: Install dependencies
         run:  npm install
-      
-      - name: Install dependencies of chromatic
-        run: npm ci
-
+        
+          
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
