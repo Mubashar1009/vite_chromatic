@@ -27,5 +27,5 @@ jobs:
 
       - name: Publish to Chromatic
         run:  npm chromatic
-        env:
+        with:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
