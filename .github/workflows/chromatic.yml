@@ -20,6 +20,6 @@ jobs:
         run: npm install
 
       - name: Run Chromatic
-        run: npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
+        run: npx chromatic --exit-once-uploaded
         env:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
