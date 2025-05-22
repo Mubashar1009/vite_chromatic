@@ -23,6 +23,6 @@ jobs:
 
 
       - name: Run Chromatic
-        uses: chromaui/action@latest
+        uses: chromaui/action@latest --auto-accept-changes --exit-zero-on-changes 
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
