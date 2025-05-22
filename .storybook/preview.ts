@@ -21,7 +21,8 @@ const preview: Preview = {
       diffIncludeAntiAliasing: false,
       delay : 1000,
       modes: {
-        "Mobile": allModes.mobile_small,  
+        "Mobile": allModes.mobile_small, 
+        "Tablet" : allModes.tablet, 
         "Desktop": allModes.default,  
       },
     }

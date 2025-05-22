@@ -1,15 +1,15 @@
 export const allModes = {
   mobile_small: {
-    name: "Mobile M",
+    name: "Mobile S",
     styles: { width: "375px", height: "667px" },
   },
   mobile_medium: {
-    name: "Mobile L",
+    name: "Mobile M",
     styles: { width: "425px", height: "736px" },
   },
-  large: { name: "Tablet", styles: { width: "768px", height: "1024px" } },
+  tablet: { name: "Tablet", styles: { width: "768px", height: "1024px" } },
   laptop_small: {
-    name: "Laptop M",
+    name: "Laptop S",
     styles: { width: "1024px", height: "768px" },
   },
   default: { name: "Default", styles: { width: "1280px", height: "720px" } },
