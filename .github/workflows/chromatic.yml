@@ -29,4 +29,4 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          projectToken: ${{ secrets.CHROMATIC_PACKAGE_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
