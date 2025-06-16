@@ -5,19 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cross-env NODE_OPTIONS=--max-old-space-size=8192 npx storybook build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.8",
-    "vite-plugin-bundlesize": "^0.2.0"
+    "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.0",
@@ -45,6 +43,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5",
+    "vite-plugin-bundlesize": "^0.2.0",
     "vitest": "^3.2.0"
   }
 }
