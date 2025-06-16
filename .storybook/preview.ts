@@ -1,6 +1,17 @@
-import type { Preview } from '@storybook/react'
-import { allModes } from './mode';
+import type { Preview } from '@storybook/react-vite'
 import "../src/index.css"
+import { withThemeByClassName } from '@storybook/addon-themes';
+
+export const decorators = [
+  withThemeByClassName({
+    themes: {
+      light: 'light',
+      dark: 'dark',
+    },
+    defaultTheme: 'light',
+  }),
+];
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -9,22 +20,12 @@ const preview: Preview = {
        date: /Date$/i,
       },
     },
-    tags : true,
-    viewport: {
-      viewports: allModes,
-      defaultViewport: allModes.default,
-    },
-    chromatic : {
-      diffThreshold: 0.02,
-      autoAcceptChanges: false,
-      captureBeyondViewport: false,
-      diffIncludeAntiAliasing: false,
-      delay : 1000,
-      modes: {
-        "Mobile": allModes.mobile_small, 
-        "Tablet" : allModes.tablet, 
-        "Desktop": allModes.default,  
-      },
+
+    a11y: {
+      // 'todo' - show a11y violations in the test UI only
+      // 'error' - fail CI on a11y violations
+      // 'off' - skip a11y checks entirely
+      test: 'todo'
     }
   },
 };

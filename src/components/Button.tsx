@@ -1,12 +1,10 @@
 
-export const Button = ({label} : {label : string}) => {
+export const Button = ({label}:{label:string}) => {
   return (
-    <div className='flex justify-center items-center h-12 w-12 bg-amber-600 px-8 py-8 '>
-     {label}
-    </div>
+    <button className='px-4 py-2 rounded bg-white text-black dark:bg-black dark:text-white'>
+      {label}
+    </button>
   )
 }
-
-
 
 
