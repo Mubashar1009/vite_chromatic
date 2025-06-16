@@ -6,6 +6,6 @@ import bundlesize from "vite-plugin-bundlesize";
 export default defineConfig({
   plugins: [react(), tailwindcss(), bundlesize(),],
   build: {
-        sourcemap: "hidden",
+        sourcemap: "inline",
      },
 })
