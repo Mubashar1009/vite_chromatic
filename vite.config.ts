@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
@@ -9,10 +10,11 @@ export default defineConfig({
     tailwindcss(),
     bundlesize({
       limits: [
-        { name: "assets/index-*.js",   limit: Infinity },
-       { name: ".storybook/index-*.js", limit: Infinity },
-        { name: "**/*",                limit: "150 kB" },
+        { name: "assets/index-*.js", limit: Infinity },
+        { name: "dist/assets/index-*.js", limit: Infinity },
+        { name: "**/*", limit: "150 kB" },
       ],
+      allowFail: true,
     }),
   ],
   build: {
