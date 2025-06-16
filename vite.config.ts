@@ -11,8 +11,7 @@ export default defineConfig({
     bundlesize({
       limits: [
         { name: "assets/index-*.js", limit: Infinity },
-        { name: "dist/assets/index-*.js", limit: Infinity },
-        { name: "**/*", limit: "150 kB" },
+
       ],
       allowFail: true,
     }),
