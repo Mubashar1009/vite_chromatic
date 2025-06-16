@@ -8,7 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
     bundlesize({
-      allowFail: true,
+      limits: [
+        { name: "assets/index-*.js",   limit: Infinity },
+      ],
     }),
   ],
   build: {
