@@ -31,7 +31,3 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           onlyChanged: true
-
-      - name: Run Sandbox
-        uses: npx codesandbox-ci deploy --token ${{ secrets.CODESANDBOX_TOKEN }}
-        
