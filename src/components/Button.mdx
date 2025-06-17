@@ -1,0 +1,53 @@
+import { Meta, Canvas, ArgTypes } from "@storybook/addon-docs";
+import * as ButtonStories from "./Button.stories";
+
+<Meta of={ButtonStories} />
+
+# Layout
+
+`Layout` is a flexible container component that allows you to structure UI using either CSS Grid or Flexbox. It is powered by Tailwind CSS classes and is designed for rapid layout prototyping and responsive design patterns.
+
+Use the `layout` prop to switch between different layout strategies — `"grid"` for multi-column arrangements or `"flex"` for directional alignment.
+
+---
+
+### Usage Guidelines
+
+- Use `layout="grid"` for structured, multi-column arrangements.
+- Use `layout="flex"` for linear content flow and responsive behavior.
+
+
+
+### Best Practices
+
+### Do
+
+- Choose layout based on content needs (`grid` vs. `flex`)
+- Combine with spacing utilities like `gap`, `p`, `m`
+- Nest layout components when necessary
+
+### Don’t
+
+- Don’t hardcode layout-specific utility classes that conflict with the `layout` prop
+- Don’t over-nest without semantic structure
+- Avoid inline styles that override Tailwind responsiveness
+
+---
+
+## Props
+
+<ArgTypes of={ButtonStories} />
+
+---
+
+## :bulb: Examples
+
+### Grid Layout
+
+<Canvas of={ButtonStories.Primary} />
+
+### Flex Layout
+
+<Canvas of={ButtonStories.Secondary} />
+
+[Open in CodeSandbox](https://codesandbox.io/p/github/Mubashar1009/vite_chromatic/setup-chromatic-settings?embed=1&file=%2Fsrc%2Fcomponents%2FButton.stories.ts)
