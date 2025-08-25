@@ -19,9 +19,8 @@ jobs:
 
   #  Lighthouse Job – waits for deployment_status.success
   lighthouse:
-    if: github.event.deployment_status.state == 'success'
+    needs: [deploy]
     runs-on: ubuntu-latest
-    needs: deploy
     steps:
       - uses: actions/checkout@v4
       - run: pnpm install -g @lhci/cli@0.15.x
