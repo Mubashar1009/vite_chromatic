@@ -2,7 +2,7 @@ module.exports = {
     ci: {
       collect: {
         url: process.env.LHCI_URL??'http://localhost:5173/',
-        startServerCommand: process.env.LHCI_URL??undefined,
+        startServerCommand: process.env.URL??undefined,
       },
       assert: {
        
