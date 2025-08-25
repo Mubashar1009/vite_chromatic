@@ -4,7 +4,7 @@ module.exports =  {
   ci: {
     collect: {
       url: [process.env.LHCI_URL || "http://localhost:5173/"], 
-      startServerCommand: process.env.LHCI_START || undefined,
+      startServerCommand: process.env.LHCI_START || 'rails server -e production',
       numberOfRuns: 2,
       settings: {
         onlyCategories: [
