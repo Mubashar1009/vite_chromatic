@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .lighthouseci
+.env
 
 *storybook.log
 storybook-static
