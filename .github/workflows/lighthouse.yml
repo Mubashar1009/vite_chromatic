@@ -40,4 +40,4 @@ jobs:
           version: 9
       - run: pnpm install @lhci/cli@0.15.x
       - name: Run Lighthouse
-        run: pnpm run lighthouse --collect.url=${{ github.event.deployment_status.target_url }}
+        run: pnpm run lighthouse --collect.url=${{ github.event.deployment_status.target_url }} --collect.staticDir=./dist
