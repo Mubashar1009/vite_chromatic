@@ -17,7 +17,7 @@ jobs:
       - name: Deploy to Vercel
         run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
 
-  # 2️⃣ Lighthouse Job – waits for deployment_status.success
+  #  Lighthouse Job – waits for deployment_status.success
   lighthouse:
     if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
