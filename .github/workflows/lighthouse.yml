@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pnpm install -g @lhci/cli@0.15.x
+      - run: pnpm install @lhci/cli@0.15.x
       - name: Run Lighthouse
         run: lhci autorun
         env:
