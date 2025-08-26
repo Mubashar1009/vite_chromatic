@@ -52,4 +52,4 @@ jobs:
       - run: pnpm install @lhci/cli@0.15.x
       - run: pnpm build
       - name: Run Lighthouse
-        run: pnpm run lighthouse --collect.url=${{ github.event.deployment_status.target_url }}
+        run: pnpm run lighthouse --collect.url=${{  steps.deploy-vercel-staging.outputs.preview-url  }}
