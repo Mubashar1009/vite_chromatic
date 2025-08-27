@@ -23,7 +23,6 @@ jobs:
       - name: Deploy to Vercel
         run: npx vercel --yes --token=${{ secrets.VERCEL_TOKEN }}
 
-  #  Lighthouse Job – waits for deployment_status.success
   lighthouse:
     needs: [deploy]
     runs-on: ubuntu-latest
